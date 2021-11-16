@@ -16,6 +16,10 @@
     <small>Ne pas oublier de préparer le cas où les données sont non renseignées et/ou n'ont pas encore pu être
         remplies. Ne pas oublier d'initialiser la session. (Ici on part du principe qu'on est connectés dès que l'on
         s'inscrit.)</small>
+    <small>Afficher le formulaire s'il n'y a pas d'utilisateur connecté.</small>
+    <small>Ne pas afficher le formulaire s'il est connecté</small>
+    <p><b>BONUS : vérifier que le username fait plus de 3 caractères et que le mot de passe en fait au moins 6</b></p>
+    <p><b>BONUS : inclure un lien qui permet de se déconnecter</b></p>
     <ul>
         <li>username</li>
         <li>password</li>
