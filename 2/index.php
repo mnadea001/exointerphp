@@ -24,6 +24,7 @@
         <li>Annee</li>
         <li>Prix</li>
     </ul>
+    <a href="correction.php">Aller à la correction</a>
 </body>
 
 </html>

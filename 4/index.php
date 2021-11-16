@@ -15,6 +15,7 @@
         exercices
         dorénavant.</p>
     <small>Ne pas oublier les conventions de nommage de fragments. </small>
+    <a href="correction.php">Aller à la correction</a>
 </body>
 
 </html>

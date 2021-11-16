@@ -22,6 +22,7 @@
         <li>confirmation password</li>
         <li>email</li>
     </ul>
+    <a href="correction.php">Aller à la correction</a>
 </body>
 
 </html>

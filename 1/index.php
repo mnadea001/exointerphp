@@ -22,6 +22,8 @@
         <li>Ville</li>
         <li>Code Postal</li>
     </ul>
+
+    <a href="correction.php">Aller à la correction</a>
 </body>
 
 </html>
