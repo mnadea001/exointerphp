@@ -25,6 +25,9 @@
 </head>
 
 <body>
+    <?php
+        include '../4/_navbar.php';
+    ?>
     <h1>Exercice 1 : Identité</h1>
     <p>A l'aide d'un formulaire HTML et de PHP, affichez les données qu'un utilisateur aura rempli dans un formulaire
         via une requête POST SUR LA MEME PAGE</p>
@@ -75,6 +78,10 @@
         <input type="text" name="cp" id="cp">
         <input type="submit" value="Envoyer">
     </form>
+
+    <?php
+        include '../4/_footer.php';
+    ?>
 </body>
 
 </html>

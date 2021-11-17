@@ -51,6 +51,9 @@
 </head>
 
 <body>
+    <?php
+        include '../4/_navbar.php';
+    ?>
     <h1>Exercice 3 : Inscription</h1>
     <p>A l'aide d'un formulaire HTML et de PHP, simulez un formulaire d'inscription (avec hashage du mot de passe)
         via une requête POST sur une page d'affichage et une page de processing. Si la connexion est effective alors on
@@ -105,7 +108,9 @@
         }
     ?>
 
-
+    <?php
+        include '../4/_footer.php';
+    ?>
 </body>
 
 </html>

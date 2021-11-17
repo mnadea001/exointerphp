@@ -27,6 +27,9 @@
 </head>
 
 <body>
+    <?php
+        include '../4/_navbar.php';
+    ?>
     <h1>Exercice 2 : Voiture</h1>
     <h2>Affichage des résultats</h2>
 
@@ -41,6 +44,10 @@
     </ul>
 
     <a href="index.php">Retour au formulaire</a>
+
+    <?php
+        include '../4/_footer.php';
+    ?>
 </body>
 
 </html>

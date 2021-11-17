@@ -40,29 +40,35 @@
     }
     </style>
 </head>
-<h1>Exercice 2 : Voiture</h1>
-<h2>Formulaire</h2>
 
-<form action="affichage.php" method="post">
-    <label for="marque">marque</label>
-    <input type="text" name="marque" id="marque">
-    <label for="modele">modele</label>
-    <input type="text" name="modele" id="modele">
-    <label for="couleur">couleur</label>
-    <input type="color" name="couleur" id="couleur">
-    <label for="kilometrage">kilometrage</label>
-    <input type="number" name="kilometrage" id="kilometrage">
-    <label for="carburant">carburant</label>
-    <input type="text" name="carburant" id="carburant">
-    <label for="annee">Annee</label>
-    <input type="number" min="1970" name="annee" id="annee">
-    <label for="prix">Prix</label>
-    <input type="number" min="1" name="prix" id="prix">
-    <input type="submit" value="Envoyer">
-</form>
-</body>
+<body>
 
-</html>
+    <?php
+        include '../4/_navbar.php';
+    ?>
+    <h1>Exercice 2 : Voiture</h1>
+    <h2>Formulaire</h2>
+
+    <form action="affichage.php" method="post">
+        <label for="marque">marque</label>
+        <input type="text" name="marque" id="marque">
+        <label for="modele">modele</label>
+        <input type="text" name="modele" id="modele">
+        <label for="couleur">couleur</label>
+        <input type="color" name="couleur" id="couleur">
+        <label for="kilometrage">kilometrage</label>
+        <input type="number" name="kilometrage" id="kilometrage">
+        <label for="carburant">carburant</label>
+        <input type="text" name="carburant" id="carburant">
+        <label for="annee">Annee</label>
+        <input type="number" min="1970" name="annee" id="annee">
+        <label for="prix">Prix</label>
+        <input type="number" min="1" name="prix" id="prix">
+        <input type="submit" value="Envoyer">
+    </form>
+    <?php
+        include '../4/_footer.php';
+    ?>
 </body>
 
 </html>
