@@ -3,13 +3,19 @@
 $alert = false;
 if (!empty($_GET)) {
     $alert = true;
-    if (isset($_GET['error'])) {
-        $color = 'red';
-        $message = "Une erreur s'est produite";
+    if (!empty($_GET['error'])) {
+        $color = 'crimson';
+        $message = 'Erreur';
+        if ('missingInput' == $_GET['error']) {
+            $message = 'Tous les champs doivent être remplis';
+        }
     }
-    if (isset($_GET['success'])) {
+    if (!empty($_GET['success'])) {
         $color = 'greenyellow';
-        $message = 'Opération réussie';
+        $message = 'Succès';
+        if ('insert' == $_GET['success']) {
+            $message = 'Ligne ajouté dans la BDD';
+        }
     }
 }
 

@@ -13,6 +13,7 @@
 <body>
     <?php
         include '../4/_navbar.php';
+        include_once '../5/_alert.php';
     ?>
     <h1>Exercice 7 : Ajout simple à la BDD</h1>
     <p>A partir de la connexion réalisée à l'exercice 6 et des apprentissages des exercices précédents, utilisez un
@@ -21,6 +22,18 @@
     <small>Utilisez un système de bloc try/catch afin de réaliser vos opérations SQL.Sécurisez le tout avec des requêtes
         préparées.</small>
     <p><b>Bonus : Ajoutez des messages d'erreur dans le système pour renforcer l'expérience utilisateur</b></p>
+
+    <form action="index_post.php" method="post">
+        <label for="line_name">Nom de la ligne</label>
+        <input type="text" name="line_name" id="line_name">
+        <label for="terminus_a">Terminus A</label>
+        <input type="text" name="terminus_a" id="terminus_a">
+        <label for="terminus_b">Terminus B</label>
+        <input type="text" name="terminus_b" id="terminus_b">
+        <input type="submit" value="Envoyer">
+    </form>
+
+
     <?php
         include '../4/_footer.php';
     ?>

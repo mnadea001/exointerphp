@@ -3,6 +3,15 @@
   box-sizing: border-box;
 }
 
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
 form {
   display: flex;
   justify-content: center;
