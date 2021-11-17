@@ -2,7 +2,8 @@
 
     if (!empty($_POST)) {
         if (in_array('', $_POST)) {
-            echo 'Tous les champs doivent être remplis';
+            header('Location:correction.php?error');
+            exit();
         } else {
             $nom = htmlspecialchars(trim($_POST['nom']));
             $prenom = htmlspecialchars(trim($_POST['prenom']));
@@ -27,6 +28,7 @@
 <body>
     <?php
         include '../4/_navbar.php';
+        include_once '../5/_alert.php';
     ?>
     <h1>Exercice 1 : Identité</h1>
     <p>A l'aide d'un formulaire HTML et de PHP, affichez les données qu'un utilisateur aura rempli dans un formulaire

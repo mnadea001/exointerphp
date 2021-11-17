@@ -2,7 +2,7 @@
 
     if (!empty($_POST)) {
         if (in_array('', $_POST)) {
-            header('Location:index.php?missingInput');
+            header('Location:index.php?error=missingInput');
             exit();
         } else {
             $marque = htmlspecialchars(trim($_POST['marque']));
@@ -29,6 +29,7 @@
 <body>
     <?php
         include '../4/_navbar.php';
+        include_once '../5/_alert.php';
     ?>
     <h1>Exercice 2 : Voiture</h1>
     <h2>Affichage des résultats</h2>

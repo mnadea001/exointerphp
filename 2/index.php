@@ -45,6 +45,7 @@
 
     <?php
         include '../4/_navbar.php';
+        include_once '../5/_alert.php';
     ?>
     <h1>Exercice 2 : Voiture</h1>
     <h2>Formulaire</h2>
