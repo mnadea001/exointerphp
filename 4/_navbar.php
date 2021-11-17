@@ -9,13 +9,6 @@
 <?php
 
 $folders = array_slice(scandir('../'), 3);
-echo '<pre>';
-print_r($folders);
-echo '</pre>';
-
-echo '<pre>';
-var_dump(is_dir("../$folders[0]/"));
-echo '</pre>';
 ?>
 
 <nav>
