@@ -11,12 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice 8</title>
     <link rel="stylesheet" href="../3/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 
 <body>
     <?php
         include '../4/_navbar.php';
+        include '../5/_alert.php';
     ?>
     <h1>Exercice 8 : Affichage des données de la BDD</h1>
     <p>A partir de la connexion réalisée à l'exercice 6 et des apprentissages des exercices précédents, affichez
@@ -28,18 +30,19 @@
     <p><b>Bonus : ajoutez un champ de recherche pour filtrer les résultats par leur nom (A l'aide de l'instruction LIKE
             %recherche% dans une requête SQL)</b></p>
 
+
     <form action="" method="get">
-        <input type="text" name="search" id="search" placeholder="Rechercher ...">
-        <?php
-        if (!empty($search)) {
-            echo "<h3>Résultats de la recherche : $search</h3>";
-            if (empty($lines)) {
-                echo 'Aucun résultat trouvé !';
-            }
-            echo "<a href='index.php'>Retourner aux lignes</a>";
-        }
-    ?>
+        <label for="search">Search</label>
+        <input class="input" id="search" type="search" name="search" pattern=".*\S.*" required>
+        <span class="caret"></span>
     </form>
+    <?php
+    if (!empty($search)) {
+        echo "<h3>Résultats de la recherche : $search</h3>";
+        echo "<a href='index.php'>Retourner aux lignes</a>";
+    }
+    ?>
+
 
     <section class="card-carousel">
         <?php
@@ -53,8 +56,9 @@
                 <p>Terminus A : <?php echo $line['terminus_a']; ?></p>
                 <p>Terminus B : <?php echo $line['terminus_b']; ?></p>
 
-                <a href=""><button>Editer</button></a>
-                <a href=""><button>Supprimer</button></a>
+                <a href="../9/edit-form.php?id=<?php echo $line['id']; ?>"><button>Editer</button></a>
+                <a href="form.php?id=<?php echo $line['id']; ?>"><button>Supprimer</button></a>
+
             </div>
             <div class="card-author">
                 <a href="#" class="author-avatar">

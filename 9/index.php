@@ -21,7 +21,7 @@
         préparées.N'oubliez pas l'instruction WHERE sous peine de tout modifier</small>
     <p><b>Bonus : Ajoutez des messages d'erreur sur la page pour renforcer l'expérience utilisateur</b></p>
 
-
+    <a href="../8/index.php">Aller à la page des cartes</a>
     <?php
         include '../4/_footer.php';
     ?>
