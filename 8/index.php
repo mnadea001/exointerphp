@@ -1,3 +1,7 @@
+<?php
+    require '../8/_viewLines.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +28,52 @@
     <p><b>Bonus : ajoutez un champ de recherche pour filtrer les résultats par leur nom (A l'aide de l'instruction LIKE
             %recherche% dans une requête SQL)</b></p>
 
+    <form action="" method="get">
+        <input type="text" name="search" id="search" placeholder="Rechercher ...">
+        <?php
+        if (!empty($search)) {
+            echo "<h3>Résultats de la recherche : $search</h3>";
+            if (empty($lines)) {
+                echo 'Aucun résultat trouvé !';
+            }
+            echo "<a href='index.php'>Retourner aux lignes</a>";
+        }
+    ?>
+    </form>
+
+    <section class="card-carousel">
+        <?php
+            foreach ($lines as $line) {
+                ?>
+        <article class="card-item">
+            <header class="card-header">
+                <h2><?php echo $line['line_name']; ?></h2>
+            </header>
+            <div class="card-content">
+                <p>Terminus A : <?php echo $line['terminus_a']; ?></p>
+                <p>Terminus B : <?php echo $line['terminus_b']; ?></p>
+
+                <a href=""><button>Editer</button></a>
+                <a href=""><button>Supprimer</button></a>
+            </div>
+            <div class="card-author">
+                <a href="#" class="author-avatar">
+                    <img src="https://robohash.org/tbm" alt="avatar" />
+                </a>
+                <svg class="half-circle" viewBox="0 0 106 57">
+                    <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                </svg>
+                <div class="author-name">
+                    <div class="author-name-prefix">Author</div>
+                    TBM
+                </div>
+            </div>
+        </article>
+        <?php
+            }
+        ?>
+
+    </section>
 
     <?php
         include '../4/_footer.php';
