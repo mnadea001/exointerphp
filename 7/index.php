@@ -1,3 +1,7 @@
+<?php
+    require '../7/_viewCorp.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +34,14 @@
         <input type="text" name="terminus_a" id="terminus_a">
         <label for="terminus_b">Terminus B</label>
         <input type="text" name="terminus_b" id="terminus_b">
+        <label for="osef">Société de transports</label>
+        <select name="region_corp" id="osef">
+            <?php
+                foreach ($corps as $corp) {
+                    echo "<option value='{$corp['corporate_id']}'>{$corp['label']}</option>";
+                }
+            ?>
+        </select>
         <input type="submit" value="Envoyer">
     </form>
 

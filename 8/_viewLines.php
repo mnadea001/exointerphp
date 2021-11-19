@@ -3,7 +3,7 @@
 require '../6/database.php';
 
     $search = null;
-    $lines = $db->query('SELECT * FROM lignes')->fetchAll();
+    $lines = $db->query('SELECT * FROM lignes INNER JOIN corporate ON lignes.region_corp = corporate.corporate_id')->fetchAll();
 
     if (isset($_GET['search'])) {
         $search = htmlspecialchars(trim($_GET['search']));

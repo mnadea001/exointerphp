@@ -6,39 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice 2</title>
-    <style>
-    * {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        box-sizing: border-box;
-    }
+    <link rel="stylesheet" href="../3/style.css">
 
-    form {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    input[type=text]:focus,
-    input[type=number]:focus {
-        border: none;
-        border-bottom: 2px solid red;
-    }
-
-    input[type=button],
-    input[type=submit] {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    </style>
 </head>
 
 <body>
